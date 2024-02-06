@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavascriptOne </title>
+</head>
+<body>
+   
+ <input type="number" id="no"><br><br>
+ <button onclick="number()">Show the number is even and odd</button> <br><br>
+ <samp id="show"></samp>
+<br>
+<br>
+ <button onclick="allOddNumber()">1 to 10 Odd Number</button><br>
+ <br>
+ <button onclick="allEvenNumber()">1 to 10 Even Number</button>
+    <script>
+        let num = 5;
+        for(let i=1; i<=num; i++){
+            let j =i;
+            alert(j)
+        }
+        
+    function number(){
+     let num =document.getElementById("no").value
+        if(num%2==0){
+            document.getElementById("show").innerHTML="<h1>Number is Even</h1>"
+        }else{
+            document.getElementById("show").innerHTML="<h1>Number is odd</h1>"
+        }
+    }   
+
+    function allOddNumber(){
+        let number =10;
+        for(let i = 1; i<=number; i++){
+            
+            if(i%2!=0){
+                let j=i
+                alert(j)
+            }
+        }
+    }
+     
+    function allEvenNumber(){
+        let num = 10;
+        for(let i=1; i<=num;i++){
+            if(i%2==0){
+                alert(i)
+            }
+        }
+    }
+
+    ///fibonachiSeries.
+    function fibonacci(n){
+        const fib = [0, 1]
+        console.log("fip up " + fib)
+        for (let i = 2; i<=n ; i++){
+            fib[i] = fib[i - 1] + fib[i - 2 ]
+            console.log("fib "+ fib)
+        
+        
+        }
+        return fib 
+    }
+    let series = fibonacci(10)
+    console.log(series)
+
+    </script>
+</body>
+</html>
